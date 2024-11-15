@@ -1,0 +1,5 @@
+1. 序列化数组 -> 使用 numpy 的 tobytes 和 frombuffer (参考： https://kuanbutts.com/2023/04/06/serialize-deserialize-redis-js-to-py/）
+
+2. 存储序列化的数组： 使用 sqlachemy 的 largebinary
+
+3. 多个唯一有序数组（存的时候先做排序）做归并： 两个排序数组合并成一个排序数据 O(m+n), 然后使用 shift 作相等操作得到交集。 （参考： https://github.com/numpy/numpy/blob/v2.1.0/numpy/lib/_arraysetops_impl.py#L614-L705）
